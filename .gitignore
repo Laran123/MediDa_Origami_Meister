@@ -1,0 +1,12 @@
+﻿.godot/
+
+.import/
+
+bin/
+obj/
+
+.idea/
+
+*.user
+*.suo
+*.tmp
