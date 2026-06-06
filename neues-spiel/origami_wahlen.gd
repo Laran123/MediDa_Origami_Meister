@@ -1,8 +1,8 @@
 extends Control
 
 const FIGUREN = ["Kranich", "Frosch", "Boot", "Pelikan", "Papagei",
-	"Schmetterlng", "Schlange", "Huhn", "Katze",
-	"Dinosaur", "Bar", "Drache", "Lowe"]
+	"Schmetterling", "Schlange", "Huhn", "Katze",
+	"Dinosaurier", "Baer", "Drache", "Loewe"]
 
 func _ready():
 	for figur in FIGUREN:
