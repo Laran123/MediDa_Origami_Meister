@@ -133,3 +133,14 @@ script = ExtResource("2_wk5ws")
 [node name="Marker1" type="Marker2D" parent="SnapPoints" unique_id=1125233466 groups=["snap_points"]]
 position = Vector2(794, 1200)
 script = ExtResource("2_wk5ws")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=400000001]
+
+[node name="Zuruck" type="Button" parent="UI" unique_id=400000002]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 220.0
+offset_bottom = 80.0
+text = "Zuruck"
+
+[connection signal="pressed" from="UI/Zuruck" to="." method="_on_zuruck_pressed"]
