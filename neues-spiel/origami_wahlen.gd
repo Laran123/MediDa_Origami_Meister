@@ -1,7 +1,11 @@
 extends Control
 
 const FIGUREN = [
-	"Kranich", "Frosch", "Boot", "Pelikan", "Papagei",
+	"Kranich"
+]
+
+const FIGURENNICHTVORHANDEN = [
+	"wird noch hinzugefügt:","Frosch", "Boot", "Pelikan", "Papagei",
 	"Schmetterling", "Schlange", "Huhn", "Katze",
 	"Dinosaurier", "Baer", "Drache", "Loewe"
 ]
@@ -58,6 +62,18 @@ func _build_ui():
 		btn.add_theme_font_size_override("font_size", 36)
 
 		btn.pressed.connect(func(f = figur): _on_figur_pressed(f))
+		list.add_child(btn)
+		
+	for figur in FIGURENNICHTVORHANDEN:
+		var btn = Button.new()
+		btn.text = figur
+		
+		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		btn.custom_minimum_size = Vector2(0, 130)
+		
+		_style_button(btn)
+		btn.add_theme_font_size_override("font_size", 36)
+		btn.disabled = true
 		list.add_child(btn)
 
 	var back = Button.new()
