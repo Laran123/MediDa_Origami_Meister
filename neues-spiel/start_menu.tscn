@@ -19,7 +19,7 @@ offset_right = 2348.0
 offset_bottom = 1040.0
 text = "Regal"
 
-[node name="OrigamiWaehlen" type="Button" parent="." unique_id=300000003]
+[node name="OrigamiWahlen" type="Button" parent="." unique_id=300000003]
 layout_mode = 1
 offset_left = 1748.0
 offset_top = 1090.0
@@ -28,4 +28,4 @@ offset_bottom = 1240.0
 text = "Origami wahlen"
 
 [connection signal="pressed" from="Regal" to="." method="_on_regal_pressed"]
-[connection signal="pressed" from="OrigamiWaehlen" to="." method="_on_origami_waehlen_pressed"]
+[connection signal="pressed" from="OrigamiWahlen" to="." method="_on_origami_wahlen_pressed"]
