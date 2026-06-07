@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://du0sieo0o7p5j"]
+
+[ext_resource type="Script" uid="uid://7jhdj6kykhbn" path="res://sprite_2d.gd" id="1_0a8u5"]
+
+[node name="OrigamiPreset" type="Sprite2D" unique_id=815233400]
+script = ExtResource("1_0a8u5")
