@@ -19,7 +19,7 @@ position = Vector2(1135, 484)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker29" type="Marker2D" parent="SnapPoints" unique_id=2036426993 groups=["snap_points"]]
-position = Vector2(463, 597)
+position = Vector2(469, 572)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker28" type="Marker2D" parent="SnapPoints" unique_id=731573925 groups=["snap_points"]]
@@ -27,7 +27,7 @@ position = Vector2(1130, 706)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker27" type="Marker2D" parent="SnapPoints" unique_id=1486967955 groups=["snap_points"]]
-position = Vector2(2092, 292)
+position = Vector2(2098, 273)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker26" type="Marker2D" parent="SnapPoints" unique_id=143863466 groups=["snap_points"]]
@@ -35,11 +35,11 @@ position = Vector2(1693, 646)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker25" type="Marker2D" parent="SnapPoints" unique_id=743532052 groups=["snap_points"]]
-position = Vector2(2196, 638)
+position = Vector2(2196, 616)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker24" type="Marker2D" parent="SnapPoints" unique_id=652982980 groups=["snap_points"]]
-position = Vector2(2511, 653)
+position = Vector2(2521, 628)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker23" type="Marker2D" parent="SnapPoints" unique_id=1883465709 groups=["snap_points"]]
@@ -63,7 +63,7 @@ position = Vector2(3426, 1263)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker18" type="Marker2D" parent="SnapPoints" unique_id=627957846 groups=["snap_points"]]
-position = Vector2(3408, 1627)
+position = Vector2(3408, 1586)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker17" type="Marker2D" parent="SnapPoints" unique_id=375179011 groups=["snap_points"]]
@@ -71,7 +71,7 @@ position = Vector2(3407, 1891)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker16" type="Marker2D" parent="SnapPoints" unique_id=772067790 groups=["snap_points"]]
-position = Vector2(2892, 1190)
+position = Vector2(2886, 1171)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker15" type="Marker2D" parent="SnapPoints" unique_id=356290093 groups=["snap_points"]]

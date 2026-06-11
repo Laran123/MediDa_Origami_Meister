@@ -1,7 +1,7 @@
 extends Control
 
 const FIGUREN = [
-	"Kranich"
+	"Tutorial","Kranich"
 ]
 
 const FIGURENNICHTVORHANDEN = [
