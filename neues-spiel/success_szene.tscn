@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://com3ht6eoj0ye"]
+
+[ext_resource type="Script" uid="uid://dp0m6tgaeqwm" path="res://success_szene.gd" id="1_og0ia"]
+
+[node name="Success_szene" type="Control" unique_id=2085731095]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_og0ia")

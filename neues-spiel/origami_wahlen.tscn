@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://blw5vf7ig5ahy"]
+
+[ext_resource type="Script" uid="uid://corigamiwahlen1" path="res://origami_wahlen.gd" id="1_ow"]
+
+[node name="OrigamiWahlen" type="Control" unique_id=500000001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ow")
+
+[node name="Zuruck" type="Button" parent="." unique_id=500000002]
+layout_mode = 1
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 450.0
+offset_bottom = 200.0
+text = "Zuruck"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=500000003]
+layout_mode = 1
+offset_left = 1648.0
+offset_top = 200.0
+offset_right = 2448.0
+offset_bottom = 2100.0
+
+[connection signal="pressed" from="Zuruck" to="." method="_on_zuruck_pressed"]

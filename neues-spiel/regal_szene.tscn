@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://d1f6pbaosj6q2"]
+
+[ext_resource type="Script" uid="uid://7gfjxwu7mv1i" path="res://regal_szene.gd" id="1_dt0hu"]
+[ext_resource type="Texture2D" uid="uid://5ek2edb8qdvc" path="res://Regal.png" id="1_r2boi"]
+[ext_resource type="Script" uid="uid://7qg6lbxn5c15" path="res://snap_points.gd" id="2_wk5ws"]
+
+[node name="Node2D" type="Node2D" unique_id=885911393]
+script = ExtResource("1_dt0hu")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1797253337]
+offset_right = 4096.0
+offset_bottom = 2160.0
+texture = ExtResource("1_r2boi")
+
+[node name="SnapPoints" type="Node2D" parent="." unique_id=1508465846]
+
+[node name="Marker30" type="Marker2D" parent="SnapPoints" unique_id=1471452977 groups=["snap_points"]]
+position = Vector2(1135, 484)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker29" type="Marker2D" parent="SnapPoints" unique_id=2036426993 groups=["snap_points"]]
+position = Vector2(469, 572)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker28" type="Marker2D" parent="SnapPoints" unique_id=731573925 groups=["snap_points"]]
+position = Vector2(1130, 706)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker27" type="Marker2D" parent="SnapPoints" unique_id=1486967955 groups=["snap_points"]]
+position = Vector2(2098, 273)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker26" type="Marker2D" parent="SnapPoints" unique_id=143863466 groups=["snap_points"]]
+position = Vector2(1693, 646)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker25" type="Marker2D" parent="SnapPoints" unique_id=743532052 groups=["snap_points"]]
+position = Vector2(2196, 616)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker24" type="Marker2D" parent="SnapPoints" unique_id=652982980 groups=["snap_points"]]
+position = Vector2(2521, 628)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker23" type="Marker2D" parent="SnapPoints" unique_id=1883465709 groups=["snap_points"]]
+position = Vector2(1847, 1011)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker22" type="Marker2D" parent="SnapPoints" unique_id=970865690 groups=["snap_points"]]
+position = Vector2(2162, 1021)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker21" type="Marker2D" parent="SnapPoints" unique_id=364494692 groups=["snap_points"]]
+position = Vector2(2461, 1009)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker20" type="Marker2D" parent="SnapPoints" unique_id=1755025521 groups=["snap_points"]]
+position = Vector2(3428, 725)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker19" type="Marker2D" parent="SnapPoints" unique_id=1592953936 groups=["snap_points"]]
+position = Vector2(3426, 1263)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker18" type="Marker2D" parent="SnapPoints" unique_id=627957846 groups=["snap_points"]]
+position = Vector2(3408, 1586)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker17" type="Marker2D" parent="SnapPoints" unique_id=375179011 groups=["snap_points"]]
+position = Vector2(3407, 1891)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker16" type="Marker2D" parent="SnapPoints" unique_id=772067790 groups=["snap_points"]]
+position = Vector2(2886, 1171)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker15" type="Marker2D" parent="SnapPoints" unique_id=356290093 groups=["snap_points"]]
+position = Vector2(2880, 1439)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker14" type="Marker2D" parent="SnapPoints" unique_id=1933623110 groups=["snap_points"]]
+position = Vector2(2941, 1924)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker13" type="Marker2D" parent="SnapPoints" unique_id=2084753928 groups=["snap_points"]]
+position = Vector2(2926, 1693)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker12" type="Marker2D" parent="SnapPoints" unique_id=403370704 groups=["snap_points"]]
+position = Vector2(2529, 1551)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker11" type="Marker2D" parent="SnapPoints" unique_id=1925030665 groups=["snap_points"]]
+position = Vector2(2091, 1578)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker10" type="Marker2D" parent="SnapPoints" unique_id=24367598 groups=["snap_points"]]
+position = Vector2(1792, 1570)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker9" type="Marker2D" parent="SnapPoints" unique_id=159453941 groups=["snap_points"]]
+position = Vector2(1318, 1574)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker8" type="Marker2D" parent="SnapPoints" unique_id=1802405138 groups=["snap_points"]]
+position = Vector2(1244, 1805)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker7" type="Marker2D" parent="SnapPoints" unique_id=1985263583 groups=["snap_points"]]
+position = Vector2(755, 1886)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker6" type="Marker2D" parent="SnapPoints" unique_id=665808780 groups=["snap_points"]]
+position = Vector2(519, 1867)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker5" type="Marker2D" parent="SnapPoints" unique_id=1304072538 groups=["snap_points"]]
+position = Vector2(740, 1596)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker4" type="Marker2D" parent="SnapPoints" unique_id=1723353374 groups=["snap_points"]]
+position = Vector2(526, 1586)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker3" type="Marker2D" parent="SnapPoints" unique_id=226331652 groups=["snap_points"]]
+position = Vector2(746, 1378)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker2" type="Marker2D" parent="SnapPoints" unique_id=1799448721 groups=["snap_points"]]
+position = Vector2(509, 1380)
+script = ExtResource("2_wk5ws")
+
+[node name="Marker1" type="Marker2D" parent="SnapPoints" unique_id=1125233466 groups=["snap_points"]]
+position = Vector2(804, 1116)
+script = ExtResource("2_wk5ws")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=400000001]
+
+[node name="Zuruck" type="Button" parent="UI" unique_id=400000002]
+custom_minimum_size = Vector2(0, 110)
+offset_left = 59.0
+offset_top = 31.0
+offset_right = 312.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 32
+text = "Zurück"
+
+[connection signal="pressed" from="UI/Zuruck" to="." method="_on_zuruck_pressed"]
