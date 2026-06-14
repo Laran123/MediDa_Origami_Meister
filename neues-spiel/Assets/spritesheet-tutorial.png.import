@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cldsobaucun27"
-path="res://.godot/imported/kranich_24.png-07fe8bf432f7ac534aed9f4fb789b2c5.ctex"
+uid="uid://xwxenyyv0x2u"
+path="res://.godot/imported/spritesheet-tutorial.png-cc9162306ba84f6200d4b219891225d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Kranich/kranich_24.png"
-dest_files=["res://.godot/imported/kranich_24.png-07fe8bf432f7ac534aed9f4fb789b2c5.ctex"]
+source_file="res://Assets/spritesheet-tutorial.png"
+dest_files=["res://.godot/imported/spritesheet-tutorial.png-cc9162306ba84f6200d4b219891225d4.ctex"]
 
 [params]
 
