@@ -39,8 +39,6 @@ const TUTORIAL_TEXTS = [
 
 	"[color=gray]GEBOGENER PFEIL (↻ / ↺)\n→ DREHEN[/color]\nDrehe das Blatt auf dem Tisch (z.B. um 90°),\nohne es umzudrehen.",
 
-	"[color=#66ccff]Kreis (∘)\n→ HALTE-/FIXPUNKT[/color]\nHier musst du das Papier festhalten,\nwährend du an anderer Stelle faltest oder ziehst.",
-
 	"[color=gray]OFFENER PFEIL (leere Spitze) oder GABELUNG\n→ ÖFFNEN / ZIEHEN[/color]\nKlappe eine Tasche auf oder ziehe eine Lage auseinander.",
 
 	"[color=yellow]Ende des Tutorials![/color]\nDu kennst jetzt alle wichtigen Origami-Symbole.\nViel Spaß beim Falten!"
@@ -92,8 +90,8 @@ func _build_ui():
 	image_rect = TextureRect.new()
 	image_rect.texture = null
 	image_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
-	image_rect.custom_minimum_size = Vector2(350, 350)
-	image_rect.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	image_rect.custom_minimum_size = Vector2(175, 175)
+	image_rect.size_flags_vertical = Control.PRESET_MODE_KEEP_SIZE
 	content_hbox.add_child(image_rect)
 
 	text_label = RichTextLabel.new()
@@ -129,14 +127,7 @@ func _build_ui():
 	_style_button(next_btn)
 	btn_hbox.add_child(next_btn)
 
-	skip_btn = Button.new()
-	skip_btn.text = "SKIP"
-	skip_btn.custom_minimum_size = Vector2(240, 140)
-	skip_btn.pressed.connect(_on_skip)
-	_style_button(skip_btn, Color(0.5, 0.15, 0.1))
-	btn_hbox.add_child(skip_btn)
-
-	for btn in [back_btn, next_btn, skip_btn]:
+	for btn in [back_btn, next_btn]:
 		btn.add_theme_font_size_override("font_size", 38)
 
 func _style_button(btn: Button, custom_color: Color = Color(0.16, 0.16, 0.20)):

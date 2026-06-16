@@ -44,7 +44,7 @@ func _build_ui():
 	vbox.add_child(title)
 	
 	var tutorial_btn = Button.new()
-	tutorial_btn.text = "TUTORIAL"
+	tutorial_btn.text = "Tutorial"
 	tutorial_btn.custom_minimum_size = Vector2(0, 110)
 	_style_button(tutorial_btn)
 	tutorial_btn.add_theme_font_size_override("font_size", 36)

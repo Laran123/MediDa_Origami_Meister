@@ -46,6 +46,7 @@ animations = [{
 }]
 
 [node name="Tutorial" type="Node2D" unique_id=1034794873]
+scale = Vector2(0.5, 0.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27191306]
 scale = Vector2(0.5, 0.5)

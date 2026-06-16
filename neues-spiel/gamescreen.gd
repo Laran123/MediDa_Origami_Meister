@@ -16,20 +16,12 @@ func set_figur(f: String):
 func _load_figur_scene():
 	var scene_path = "res://%s.tscn" % figur
 	
-	if not ResourceLoader.exists(scene_path):
-		push_error("Szene nicht gefunden: " + scene_path)
-		return
-	
 	var packed = load(scene_path)
 	figur_scene_instance = packed.instantiate()
 
 	add_child(figur_scene_instance)
 	
 	animated_sprite = figur_scene_instance.get_node("AnimatedSprite2D")
-	
-	if animated_sprite == null:
-		push_error("Kein AnimatedSprite2D in der Szene gefunden!")
-		return
 	
 	animated_sprite.stop()
 	animated_sprite.frame = 0
