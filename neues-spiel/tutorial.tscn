@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://03g6rhc31w6o"]
+
+[ext_resource type="Texture2D" uid="uid://xwxenyyv0x2u" path="res://Assets/spritesheet-tutorial.png" id="1_7n6eb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yb1ct"]
+atlas = ExtResource("1_7n6eb")
+region = Rect2(0, 0, 1653, 1629)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehuit"]
+atlas = ExtResource("1_7n6eb")
+region = Rect2(1673, 0, 1653, 1629)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mrt3"]
+atlas = ExtResource("1_7n6eb")
+region = Rect2(0, 1649, 1653, 1629)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwowx"]
+atlas = ExtResource("1_7n6eb")
+region = Rect2(1673, 1649, 1653, 1629)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu44a"]
+atlas = ExtResource("1_7n6eb")
+region = Rect2(0, 3298, 1653, 1629)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0cr88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yb1ct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehuit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mrt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwowx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hu44a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tutorial" type="Node2D" unique_id=1034794873]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27191306]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_0cr88")
