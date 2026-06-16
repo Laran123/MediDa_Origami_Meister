@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cj0l36sf61tug"]
+
+[ext_resource type="Script" uid="uid://dxphxexjvrvce" path="res://tutorial_szene.gd" id="1_tgva0"]
+
+[node name="tutorial_szene" type="Control" unique_id=1296897568]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tgva0")
