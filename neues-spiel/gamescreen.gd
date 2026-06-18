@@ -1,5 +1,6 @@
 extends Control
 
+@onready var label_credits = $LabelCredits
 var figur = ""
 var step = 0
 var total_frames = 0
@@ -9,6 +10,9 @@ var figur_scene_instance  # Referenz auf die geladene Figur-Szene
 func _ready():
 	_build_ui()
 	_load_figur_scene()
+	
+	if figur == 'Credits':
+		label_credits.visible = true
 	
 func set_figur(f: String):
 	figur = f
@@ -28,6 +32,7 @@ func _load_figur_scene():
 	
 	total_frames = animated_sprite.sprite_frames.get_frame_count(
 		animated_sprite.animation)
+		
 	
 	call_deferred("_position_sprite")
 

@@ -14,6 +14,10 @@ texture = ExtResource("1_r2boi")
 
 [node name="SnapPoints" type="Node2D" parent="." unique_id=1508465846]
 
+[node name="Marker31" type="Marker2D" parent="SnapPoints" unique_id=1203231208 groups=["snap_points"]]
+position = Vector2(720, 155)
+script = ExtResource("2_wk5ws")
+
 [node name="Marker30" type="Marker2D" parent="SnapPoints" unique_id=1471452977 groups=["snap_points"]]
 position = Vector2(1135, 484)
 script = ExtResource("2_wk5ws")

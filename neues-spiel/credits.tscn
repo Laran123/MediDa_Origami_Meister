@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cntjbl56hnylt"]
+
+[ext_resource type="Texture2D" uid="uid://c6sgecnmnv1dh" path="res://Assets/credits.png" id="1_nm7lk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t5rx0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nm7lk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="credits" type="Node2D" unique_id=800440611]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1944441964]
+sprite_frames = SubResource("SpriteFrames_t5rx0")

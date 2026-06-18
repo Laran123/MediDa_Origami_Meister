@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cj6n5jurxrvhd"]
 
-[ext_resource type="Script" path="res://start_menu.gd" id="1_sm"]
+[ext_resource type="Script" uid="uid://cstartmenu001" path="res://start_menu.gd" id="1_sm"]
 
 [node name="StartMenu" type="Control" unique_id=300000001]
 layout_mode = 3
@@ -10,6 +10,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sm")
+
+[node name="Credits" type="Button" parent="." unique_id=1680773426]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 2054.0
+offset_right = 263.0
+offset_bottom = 2134.0
+theme_override_colors/font_color = Color(0.7882353, 0.4862745, 0.4392157, 1)
+theme_override_font_sizes/font_size = 40
+text = "Credits"
 
 [node name="Regal" type="Button" parent="." unique_id=300000002]
 layout_mode = 1

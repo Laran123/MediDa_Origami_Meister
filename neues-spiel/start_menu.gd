@@ -2,6 +2,7 @@ extends Control
 
 var btn_origami
 var btn_regal
+var btn_credits
 
 func _ready():
 	_build_ui()
@@ -54,6 +55,14 @@ func _build_ui():
 	btn_regal.add_theme_font_size_override("font_size", 42)
 	btn_regal.pressed.connect(_on_regal_pressed)
 	vbox.add_child(btn_regal)
+	
+	btn_credits = Button.new()
+	btn_credits.text = "Credits"
+	btn_credits.custom_minimum_size = Vector2(650, 160)
+	_style_button_credits(btn_credits)
+	btn_credits.add_theme_font_size_override("font_size", 30)
+	btn_credits.pressed.connect(_on_credits_pressed)
+	vbox.add_child(btn_credits)
 
 func _style_button(btn: Button):
 
@@ -68,16 +77,32 @@ func _style_button(btn: Button):
 	normal.content_margin_top = 20
 	normal.content_margin_bottom = 20
 
-	var hover = normal.duplicate()
-	hover.bg_color = Color(0.26, 0.26, 0.34)
-
 	var pressed = normal.duplicate()
 	pressed.bg_color = Color(0.12, 0.12, 0.16)
 
 	btn.add_theme_stylebox_override("normal", normal)
-	btn.add_theme_stylebox_override("hover", hover)
 	btn.add_theme_stylebox_override("pressed", pressed)
+	
+func _style_button_credits(btn: Button):
 
+	var normal = StyleBoxFlat.new()
+	normal.bg_color = Color(0.093, 0.029, 0.001, 1.0)
+	normal.corner_radius_top_left = 22
+	normal.corner_radius_top_right = 22
+	normal.corner_radius_bottom_left = 22
+	normal.corner_radius_bottom_right = 22
+	normal.content_margin_left = 30
+	normal.content_margin_right = 30
+	normal.content_margin_top = 30
+	normal.content_margin_bottom = 20
+
+
+	var pressed = normal.duplicate()
+	pressed.bg_color = Color(0.139, 0.073, 0.004, 1.0)
+
+	btn.add_theme_stylebox_override("normal", normal)
+	btn.add_theme_stylebox_override("pressed", pressed)
+	
 func _animate_in():
 
 	modulate.a = 0
@@ -92,3 +117,11 @@ func _on_regal_pressed():
 
 func _on_origami_wahlen_pressed():
 	get_tree().change_scene_to_file("res://origami_wahlen.tscn")
+func _on_credits_pressed():
+	var credits = 'Credits'
+	var scene = load("res://GameScreen.tscn").instantiate()
+	scene.set_figur(credits)
+
+	get_tree().root.add_child(scene)
+	get_tree().current_scene.queue_free()
+	get_tree().current_scene = scene
