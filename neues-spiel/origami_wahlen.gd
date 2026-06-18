@@ -53,6 +53,12 @@ func _build_ui():
 	
 	var scroll = ScrollContainer.new()
 	scroll.custom_minimum_size = Vector2(1100, 650)
+
+	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_ALWAYS
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	
+	var v_scroll = scroll.get_node("VScrollBar")
+
 	vbox.add_child(scroll)
 
 	var list = VBoxContainer.new()
