@@ -6,6 +6,8 @@ var step = 0
 var total_frames = 0
 var animated_sprite: AnimatedSprite2D
 var figur_scene_instance  # Referenz auf die geladene Figur-Szene
+var _next_btn: Button
+var _finish_panel: Panel
 
 func _ready():
 	_build_ui()
@@ -67,6 +69,12 @@ func _on_next():
 		_finish_origami()
 		
 func _on_back():
+	if _finish_panel != null:
+		_finish_panel.queue_free()
+		_finish_panel = null
+		if _next_btn != null:
+			_next_btn.show()
+		return
 	if step > 0:
 		step -= 1
 		_update_frame()
@@ -74,17 +82,76 @@ func _on_back():
 		get_tree().change_scene_to_file("res://origami_wahlen.tscn")
 		
 func _finish_origami():
+	if figur == 'Credits':
+		get_tree().change_scene_to_file("res://start_menu.tscn")
+		return
+
 	if figur not in GameState.completed_origami:
 		GameState.completed_origami.append(figur)
-	var scene = load("res://success_szene.tscn").instantiate()
-	scene.set_figur(figur)
-	var last_texture = animated_sprite.sprite_frames.get_frame_texture(
-		animated_sprite.animation, total_frames - 1
-	)
-	scene.set_preview_texture(last_texture)
-	get_tree().root.add_child(scene)
-	get_tree().current_scene.queue_free()
-	get_tree().current_scene = scene
+
+	if _next_btn != null:
+		_next_btn.hide()
+
+	var panel = Panel.new()
+	panel.anchor_left = 0.25
+	panel.anchor_top = 0.18
+	panel.anchor_right = 0.75
+	panel.anchor_bottom = 0.82
+	panel.offset_left = 0
+	panel.offset_top = 0
+	panel.offset_right = 0
+	panel.offset_bottom = 0
+	_finish_panel = panel
+
+	var style = StyleBoxFlat.new()
+	style.bg_color = Color(0.10, 0.10, 0.14, 0.85)
+	style.set_border_width_all(3)
+	style.border_color = Color(1, 1, 1, 0.5)
+	style.set_corner_radius_all(20)
+	panel.add_theme_stylebox_override("panel", style)
+	add_child(panel)
+
+	var label = Label.new()
+	label.text = _load_erklaerungstext()
+	label.add_theme_font_size_override("font_size", 36)
+	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.anchor_right = 1
+	label.anchor_bottom = 1
+	label.offset_left = 40
+	label.offset_top = 40
+	label.offset_right = -40
+	label.offset_bottom = -160
+	panel.add_child(label)
+
+	var ok = Button.new()
+	ok.text = "OK"
+	ok.custom_minimum_size = Vector2(360, 130)
+	_style_button(ok)
+	ok.add_theme_font_size_override("font_size", 38)
+	ok.pressed.connect(_go_regal)
+	panel.add_child(ok)
+	ok.anchor_left = 0.5
+	ok.anchor_top = 1
+	ok.anchor_right = 0.5
+	ok.anchor_bottom = 1
+	ok.offset_left = -180
+	ok.offset_top = -150
+	ok.offset_right = 180
+	ok.offset_bottom = -20
+
+func _load_erklaerungstext() -> String:
+	var path = "res://Erklaerungstexte.md"
+	if not FileAccess.file_exists(path):
+		return ""
+	var f = FileAccess.open(path, FileAccess.READ)
+	var text = f.get_as_text()
+	f.close()
+	return text
+
+func _go_regal():
+	get_tree().change_scene_to_file("res://regal_szene.tscn")
 	
 func _build_ui():
 	var bg = TextureRect.new()
@@ -99,7 +166,7 @@ func _build_ui():
 	back.custom_minimum_size = Vector2(360, 130)
 	back.position = Vector2(40, 40)
 	_style_button(back)
-	back.add_theme_font_size_override("font_size", 32)
+	back.add_theme_font_size_override("font_size",32)
 	back.pressed.connect(_on_back)
 	add_child(back)
 	
@@ -110,7 +177,8 @@ func _build_ui():
 	next.add_theme_font_size_override("font_size", 38)
 	next.pressed.connect(_on_next)
 	add_child(next)
-	
+	_next_btn = next
+
 	next.anchor_left = 1
 	next.anchor_top = 1
 	next.anchor_right = 1
@@ -123,17 +191,19 @@ func _build_ui():
 func _style_button(btn: Button):
 	var normal = StyleBoxFlat.new()
 	normal.bg_color = Color(0.16, 0.16, 0.20)
+
 	normal.corner_radius_top_left = 24
 	normal.corner_radius_top_right = 24
 	normal.corner_radius_bottom_left = 24
 	normal.corner_radius_bottom_right = 24
+	
 	normal.content_margin_left = 30
 	normal.content_margin_right = 30
 	normal.content_margin_top = 18
 	normal.content_margin_bottom = 18
 	
 	var hover = normal.duplicate()
-	hover.bg_color = Color(0.24, 0.24, 0.32)
+	hover.bg_color =  Color(0.24, 0.24, 0.32)
 	
 	var pressed = normal.duplicate()
 	pressed.bg_color = Color(0.10, 0.10, 0.14)
