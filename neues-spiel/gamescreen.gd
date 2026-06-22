@@ -15,6 +15,8 @@ func _ready():
 	
 	if figur == 'Credits':
 		label_credits.visible = true
+	else:
+		label_credits.visible = false
 	
 func set_figur(f: String):
 	figur = f
@@ -82,9 +84,6 @@ func _on_back():
 		get_tree().change_scene_to_file("res://origami_wahlen.tscn")
 		
 func _finish_origami():
-	if figur == 'Credits':
-		get_tree().change_scene_to_file("res://start_menu.tscn")
-		return
 
 	if figur not in GameState.completed_origami:
 		GameState.completed_origami.append(figur)
@@ -102,6 +101,7 @@ func _finish_origami():
 	panel.offset_right = 0
 	panel.offset_bottom = 0
 	_finish_panel = panel
+	
 
 	var style = StyleBoxFlat.new()
 	style.bg_color = Color(0.10, 0.10, 0.14, 0.85)
@@ -110,10 +110,19 @@ func _finish_origami():
 	style.set_corner_radius_all(20)
 	panel.add_theme_stylebox_override("panel", style)
 	add_child(panel)
-
+	
+	
 	var label = Label.new()
-	label.text = _load_erklaerungstext()
-	label.add_theme_font_size_override("font_size", 36)
+	if figur != 'Credits':
+		label.text = _load_erklaerungstext()
+	else:
+		label.text ="""
+		Credits:
+			Jolien Paulinksky,
+			Hai Dang,
+			Laran Wolf,
+			Milosz Figura"""
+	label.add_theme_font_size_override("font_size", 42)
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
