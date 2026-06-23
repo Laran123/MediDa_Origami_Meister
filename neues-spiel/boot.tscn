@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dwgklpnli4ory"]
+
+[ext_resource type="Texture2D" uid="uid://dd8ad1rd3ewac" path="res://Assets/spritesheet-boot.png" id="1_hjvc4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n76rq"]
+atlas = ExtResource("1_hjvc4")
+region = Rect2(0, 0, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5imi"]
+atlas = ExtResource("1_hjvc4")
+region = Rect2(1665, 0, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_segco"]
+atlas = ExtResource("1_hjvc4")
+region = Rect2(3330, 0, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6jb1"]
+atlas = ExtResource("1_hjvc4")
+region = Rect2(0, 1640, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf3if"]
+atlas = ExtResource("1_hjvc4")
+region = Rect2(1665, 1640, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm40k"]
+atlas = ExtResource("1_hjvc4")
+region = Rect2(3330, 1640, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ye5a"]
+atlas = ExtResource("1_hjvc4")
+region = Rect2(0, 3280, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o1yb"]
+atlas = ExtResource("1_hjvc4")
+region = Rect2(1665, 3280, 1665, 1640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ld80n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n76rq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5imi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_segco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6jb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf3if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm40k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ye5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o1yb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="boot" type="Node2D" unique_id=1300645632]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2070124836]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ld80n")

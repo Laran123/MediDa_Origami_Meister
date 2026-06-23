@@ -1,11 +1,11 @@
 extends Control
 
 const FIGUREN = [
-	"Kranich","Frosch"
+	"Kranich","Frosch","Boot"
 ]
 
 const FIGURENNICHTVORHANDEN = [
-	"wird noch hinzugefügt:", "Boot", "Pelikan", "Papagei",
+	"wird noch hinzugefügt:", "Pelikan", "Papagei",
 	"Schmetterling", "Schlange", "Huhn", "Katze",
 	"Dinosaurier", "Baer", "Drache", "Loewe"
 ]

@@ -67,11 +67,11 @@ position = Vector2(3426, 1263)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker18" type="Marker2D" parent="SnapPoints" unique_id=627957846 groups=["snap_points"]]
-position = Vector2(3408, 1586)
+position = Vector2(3411, 1618)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker17" type="Marker2D" parent="SnapPoints" unique_id=375179011 groups=["snap_points"]]
-position = Vector2(3407, 1891)
+position = Vector2(3413, 1920)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker16" type="Marker2D" parent="SnapPoints" unique_id=772067790 groups=["snap_points"]]
@@ -83,7 +83,7 @@ position = Vector2(2880, 1439)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker14" type="Marker2D" parent="SnapPoints" unique_id=1933623110 groups=["snap_points"]]
-position = Vector2(2941, 1924)
+position = Vector2(2951, 1953)
 script = ExtResource("2_wk5ws")
 
 [node name="Marker13" type="Marker2D" parent="SnapPoints" unique_id=2084753928 groups=["snap_points"]]

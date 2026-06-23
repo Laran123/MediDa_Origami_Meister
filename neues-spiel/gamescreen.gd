@@ -1,6 +1,5 @@
 extends Control
 
-@onready var label_credits = $LabelCredits
 var figur = ""
 var step = 0
 var total_frames = 0
@@ -12,11 +11,6 @@ var _finish_panel: Panel
 func _ready():
 	_build_ui()
 	_load_figur_scene()
-	
-	if figur == 'Credits':
-		label_credits.visible = true
-	else:
-		label_credits.visible = false
 	
 func set_figur(f: String):
 	figur = f
