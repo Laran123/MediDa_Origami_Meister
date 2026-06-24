@@ -18,6 +18,7 @@ func _ready():
 		sprite.texture = texture
 
 		var s = 0.18 + randf() * 0.05
+		print(s)
 		sprite.scale = Vector2(s, s)
 		sprite.rotation = randf_range(-0.05, 0.05)
 		sprite.figur_name = figur

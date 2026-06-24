@@ -1,34 +1,34 @@
 [gd_scene format=3 uid="uid://dop4f44cutsu1"]
 
-[ext_resource type="Texture2D" uid="uid://j0x785ir7glt" path="res://Assets/spritesheet-blubblub.png" id="1_emqxm"]
+[ext_resource type="Texture2D" uid="uid://clec2mg6ns3rg" path="res://Assets/spritesheet-blubblub-test.png" id="1_emqxm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1nqed"]
 atlas = ExtResource("1_emqxm")
-region = Rect2(0, 0, 3979, 3920)
+region = Rect2(0, 0, 2162, 2129)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8r7os"]
 atlas = ExtResource("1_emqxm")
-region = Rect2(3979, 0, 3979, 3920)
+region = Rect2(2162, 0, 2162, 2129)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybetr"]
 atlas = ExtResource("1_emqxm")
-region = Rect2(7958, 0, 3979, 3920)
+region = Rect2(4324, 0, 2162, 2129)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_38dgd"]
 atlas = ExtResource("1_emqxm")
-region = Rect2(0, 3920, 3979, 3920)
+region = Rect2(0, 2129, 2162, 2129)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_roigw"]
 atlas = ExtResource("1_emqxm")
-region = Rect2(3979, 3920, 3979, 3920)
+region = Rect2(2162, 2129, 2162, 2129)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_woxvi"]
 atlas = ExtResource("1_emqxm")
-region = Rect2(7958, 3920, 3979, 3920)
+region = Rect2(4324, 2129, 2162, 2129)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_emqxm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuu0s"]
 atlas = ExtResource("1_emqxm")
-region = Rect2(200, 8640, 3879, 3120)
+region = Rect2(0, 4258, 2162, 2129)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xb6js"]
 animations = [{
@@ -52,7 +52,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_woxvi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_emqxm")
+"texture": SubResource("AtlasTexture_fuu0s")
 }],
 "loop": true,
 "name": &"default",
