@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dop4f44cutsu1"]
+
+[ext_resource type="Texture2D" uid="uid://j0x785ir7glt" path="res://Assets/spritesheet-blubblub.png" id="1_emqxm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nqed"]
+atlas = ExtResource("1_emqxm")
+region = Rect2(0, 0, 3979, 3920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r7os"]
+atlas = ExtResource("1_emqxm")
+region = Rect2(3979, 0, 3979, 3920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybetr"]
+atlas = ExtResource("1_emqxm")
+region = Rect2(7958, 0, 3979, 3920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38dgd"]
+atlas = ExtResource("1_emqxm")
+region = Rect2(0, 3920, 3979, 3920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roigw"]
+atlas = ExtResource("1_emqxm")
+region = Rect2(3979, 3920, 3979, 3920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woxvi"]
+atlas = ExtResource("1_emqxm")
+region = Rect2(7958, 3920, 3979, 3920)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emqxm"]
+atlas = ExtResource("1_emqxm")
+region = Rect2(200, 8640, 3879, 3120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xb6js"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nqed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r7os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybetr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38dgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roigw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woxvi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emqxm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="fisch" type="Node2D" unique_id=880936942]
+scale = Vector2(0.5, 0.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1016509627]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_xb6js")

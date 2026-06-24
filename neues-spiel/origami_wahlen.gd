@@ -1,14 +1,19 @@
 extends Control
 
-const FIGUREN = [
-	"Kranich","Frosch","Boot"
-]
+const FIGUREN_LEICHT = [
+	"Boot"]
+
+const FIGUREN_MITTEL = [
+	"Frosch","Fisch",
+	"Schmetterling"]
+
+const FIGUREN_SCHWER = [
+	"Kranich"]
 
 const FIGURENNICHTVORHANDEN = [
 	"wird noch hinzugefügt:", "Pelikan", "Papagei",
-	"Schmetterling", "Schlange", "Huhn", "Katze",
-	"Dinosaurier", "Baer", "Drache", "Loewe"
-]
+	"Schlange", "Huhn", "Katze",
+	"Dinosaurier", "Baer", "Drache", "Loewe"]
 
 func _ready():
 	_build_ui()
@@ -65,30 +70,75 @@ func _build_ui():
 	list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	list.add_theme_constant_override("separation", 20)
 	scroll.add_child(list)
+	
+	var btn_leicht = Button.new()
+	btn_leicht.text = "LEICHT:"
+		
+	btn_leicht.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	btn_leicht.custom_minimum_size = Vector2(0, 130)
+		
+	_style_button(btn_leicht)
+	btn_leicht.add_theme_font_size_override("font_size", 36)
+	btn_leicht.disabled = true
+	list.add_child(btn_leicht)
 
-	for figur in FIGUREN:
+	for figur in FIGUREN_LEICHT:
 		var btn = Button.new()
 		btn.text = figur
 
 		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		btn.custom_minimum_size = Vector2(0, 130)
 
-		_style_button(btn)
+		_style_button_figur(btn)
 		btn.add_theme_font_size_override("font_size", 36)
 
 		btn.pressed.connect(func(f = figur): _on_figur_pressed(f))
 		list.add_child(btn)
 		
-	for figur in FIGURENNICHTVORHANDEN:
+	var btn_mittel = Button.new()
+	btn_mittel.text = "MITTEL:"
+		
+	btn_mittel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	btn_mittel.custom_minimum_size = Vector2(0, 130)
+	_style_button(btn_mittel)
+	btn_mittel.add_theme_font_size_override("font_size", 36)
+	btn_mittel.disabled = true
+	list.add_child(btn_mittel)
+
+	for figur in FIGUREN_MITTEL:
 		var btn = Button.new()
 		btn.text = figur
-		
+
 		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		btn.custom_minimum_size = Vector2(0, 130)
-		
-		_style_button(btn)
+
+		_style_button_figur(btn)
 		btn.add_theme_font_size_override("font_size", 36)
-		btn.disabled = true
+
+		btn.pressed.connect(func(f = figur): _on_figur_pressed(f))
+		list.add_child(btn)
+		
+	var btn_schwer = Button.new()
+	btn_schwer.text = "SCHWER:"
+		
+	btn_schwer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	btn_schwer.custom_minimum_size = Vector2(0, 130)
+	_style_button(btn_schwer)
+	btn_schwer.add_theme_font_size_override("font_size", 36)
+	btn_schwer.disabled = true
+	list.add_child(btn_schwer)
+
+	for figur in FIGUREN_SCHWER:
+		var btn = Button.new()
+		btn.text = figur
+
+		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		btn.custom_minimum_size = Vector2(0, 130)
+
+		_style_button_figur(btn)
+		btn.add_theme_font_size_override("font_size", 36)
+
+		btn.pressed.connect(func(f = figur): _on_figur_pressed(f))
 		list.add_child(btn)
 
 	var back = Button.new()
@@ -127,6 +177,28 @@ func _style_button(btn: Button):
 	btn.add_theme_stylebox_override("hover", hover)
 	btn.add_theme_stylebox_override("pressed", pressed)
 
+func _style_button_figur(btn: Button):
+
+	var normal = StyleBoxFlat.new()
+	normal.bg_color = Color(0.293, 0.108, 0.361, 1.0)
+	normal.corner_radius_top_left = 18
+	normal.corner_radius_top_right = 18
+	normal.corner_radius_bottom_left = 18
+	normal.corner_radius_bottom_right = 18
+	normal.content_margin_left = 30
+	normal.content_margin_right = 30
+	normal.content_margin_top = 18
+	normal.content_margin_bottom = 18
+
+	var hover = normal.duplicate()
+	hover.bg_color = Color(0.538, 0.245, 0.711, 1.0)
+
+	var pressed = normal.duplicate()
+	pressed.bg_color = Color(0.141, 0.02, 0.18, 1.0)
+
+	btn.add_theme_stylebox_override("normal", normal)
+	btn.add_theme_stylebox_override("hover", hover)
+	btn.add_theme_stylebox_override("pressed", pressed)
 func _animate_in():
 	modulate.a = 0
 	scale = Vector2(1.03, 1.03)

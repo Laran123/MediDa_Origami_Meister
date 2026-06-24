@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d13h2rkevkwbt"]
+
+[ext_resource type="Texture2D" uid="uid://0txx1svco6b5" path="res://Assets/spritesheet-schmetterling.png" id="1_vfe0j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ncxe"]
+atlas = ExtResource("1_vfe0j")
+region = Rect2(0, 0, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7e5j"]
+atlas = ExtResource("1_vfe0j")
+region = Rect2(1665, 0, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amu06"]
+atlas = ExtResource("1_vfe0j")
+region = Rect2(3330, 0, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mqd7"]
+atlas = ExtResource("1_vfe0j")
+region = Rect2(0, 1640, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pkam"]
+atlas = ExtResource("1_vfe0j")
+region = Rect2(1665, 1640, 1665, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll6e5"]
+atlas = ExtResource("1_vfe0j")
+region = Rect2(3330, 1640, 1665, 1640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02d3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ncxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7e5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amu06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mqd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pkam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ll6e5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="schmetterling" type="Node2D" unique_id=1931049714]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=954872240]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_02d3s")
