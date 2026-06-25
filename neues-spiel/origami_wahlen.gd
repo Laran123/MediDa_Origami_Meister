@@ -180,7 +180,7 @@ func _style_button(btn: Button):
 func _style_button_figur(btn: Button):
 
 	var normal = StyleBoxFlat.new()
-	normal.bg_color = Color(0.293, 0.108, 0.361, 1.0)
+	normal.bg_color = Color(0.111, 0.24, 0.132, 1.0)
 	normal.corner_radius_top_left = 18
 	normal.corner_radius_top_right = 18
 	normal.corner_radius_bottom_left = 18
@@ -191,10 +191,10 @@ func _style_button_figur(btn: Button):
 	normal.content_margin_bottom = 18
 
 	var hover = normal.duplicate()
-	hover.bg_color = Color(0.538, 0.245, 0.711, 1.0)
+	hover.bg_color = Color(0.318, 0.454, 0.255, 1.0)
 
 	var pressed = normal.duplicate()
-	pressed.bg_color = Color(0.141, 0.02, 0.18, 1.0)
+	pressed.bg_color = Color(0.051, 0.102, 0.03, 1.0)
 
 	btn.add_theme_stylebox_override("normal", normal)
 	btn.add_theme_stylebox_override("hover", hover)
