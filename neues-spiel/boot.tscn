@@ -2,41 +2,44 @@
 
 [ext_resource type="Texture2D" uid="uid://dd8ad1rd3ewac" path="res://Assets/spritesheet-boot.png" id="1_hjvc4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n76rq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjvc4"]
 atlas = ExtResource("1_hjvc4")
 region = Rect2(0, 0, 1665, 1640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t5imi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n76rq"]
 atlas = ExtResource("1_hjvc4")
 region = Rect2(1665, 0, 1665, 1640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_segco"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5imi"]
 atlas = ExtResource("1_hjvc4")
 region = Rect2(3330, 0, 1665, 1640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m6jb1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_segco"]
 atlas = ExtResource("1_hjvc4")
 region = Rect2(0, 1640, 1665, 1640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xf3if"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6jb1"]
 atlas = ExtResource("1_hjvc4")
 region = Rect2(1665, 1640, 1665, 1640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dm40k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf3if"]
 atlas = ExtResource("1_hjvc4")
 region = Rect2(3330, 1640, 1665, 1640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ye5a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm40k"]
 atlas = ExtResource("1_hjvc4")
 region = Rect2(0, 3280, 1665, 1640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0o1yb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ye5a"]
 atlas = ExtResource("1_hjvc4")
 region = Rect2(1665, 3280, 1665, 1640)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ld80n"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjvc4")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n76rq")
 }, {
@@ -57,9 +60,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8ye5a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0o1yb")
 }],
 "loop": true,
 "name": &"default",
