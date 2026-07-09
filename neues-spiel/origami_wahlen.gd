@@ -62,7 +62,7 @@ func _build_ui():
 	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_ALWAYS
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	
-	var v_scroll = scroll.get_node("VScrollBar")
+	#var v_scroll = scroll.get_node("VScrollBar")
 
 	vbox.add_child(scroll)
 
@@ -209,7 +209,7 @@ func _animate_in():
 
 func _on_figur_pressed(figur: String):
 
-	var scene = load("res://GameScreen.tscn").instantiate()
+	var scene = load("res://gamescreen.tscn").instantiate()
 	scene.set_figur(figur)
 
 	get_tree().root.add_child(scene)
